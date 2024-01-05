@@ -61,10 +61,10 @@
 		EFFD94292B4694B200E12BBA /* Baechiggo */ = {
 			isa = PBXGroup;
 			children = (
+				EFFD94472B47E89E00E12BBA /* Utils */,
 				EFFD943B2B47C33100E12BBA /* Launch Screen.storyboard */,
 				EFFD942A2B4694B200E12BBA /* BaechiggoApp.swift */,
 				EFFD942C2B4694B200E12BBA /* RootView.swift */,
-				EFFD94452B47E07D00E12BBA /* KeyManager.swift */,
 				EFFD94422B47DFBE00E12BBA /* KeyList.plist */,
 				EFFD942E2B4694B300E12BBA /* Assets.xcassets */,
 				EFFD94302B4694B300E12BBA /* Preview Content */,
@@ -78,6 +78,30 @@
 				EFFD94312B4694B300E12BBA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EFFD94472B47E89E00E12BBA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EFFD94492B47E8C500E12BBA /* Managers */,
+				EFFD94482B47E8A800E12BBA /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EFFD94482B47E8A800E12BBA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EFFD94492B47E8C500E12BBA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EFFD94452B47E07D00E12BBA /* KeyManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
