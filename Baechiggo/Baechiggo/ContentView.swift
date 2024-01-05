@@ -9,9 +9,11 @@ import SwiftUI
 import Alamofire
 
 //    let test = "https://www.notion.so/8ad11213234d4bf0a2bc41d10254d30c?v=74171ed6b12c4aba9d05a0f2967deadb&pvs=4"
-//    let api = TestAPI()
+    
 
 struct RootView: View {
+    let api = TestAPI()
+    
     var body: some View {
         NavigationView {
             Form {
@@ -41,7 +43,7 @@ struct TestAPI {
 //    https://www.notion.so/2250222c51e24d9d82a948c9a6715a4d?pvs=4
 //    https:www.notion.so/a41328cac58f48468a4471c33e0f53b4?v=bc98748f9bee4c0bbd66b5060bd80df0&pvs=4
 //    https://www.notion.so/2024-1-4-7edae5330cff4ba0bfc3012ffc139764?pvs=4
-        AF.request("https://api.notion.com/v1/blocks/2250222c51e24d9d82a948c9a6715a4d/children",
+        AF.request("https://api.notion.com/v1/blocks/978fe6f3-4ca4-441b-832f-d0a7228bd643/children",
                    method: .get,
                    parameters: nil,
                    encoding: JSONEncoding.default,
