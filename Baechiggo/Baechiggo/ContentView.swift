@@ -8,38 +8,41 @@
 import SwiftUI
 import Alamofire
 
-struct ContentView: View {
-    let test = "https://www.notion.so/8ad11213234d4bf0a2bc41d10254d30c?v=74171ed6b12c4aba9d05a0f2967deadb&pvs=4"
-    let api = TestAPI()
-    
+//    let test = "https://www.notion.so/8ad11213234d4bf0a2bc41d10254d30c?v=74171ed6b12c4aba9d05a0f2967deadb&pvs=4"
+//    let api = TestAPI()
+
+struct RootView: View {
     var body: some View {
-        VStack {
-            
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("push Test!")
+        NavigationView {
+            Form {
+                Section {
+                    NavigationLink("출석하기") { Text("출석하기") }
+                    NavigationLink("점수계산") { Text("점수 계산") }
+                }
+            }
         }
-        .padding()
     }
-    
-    
-    
 }
 
+
+
 #Preview {
-    ContentView()
+    RootView()
 }
 
 struct TestAPI {
     let notionHeaders : HTTPHeaders = [HTTPHeader(name: "Authorization", value: "secret_JoL2mbdes95THHhuUXUeaE29VeRr6wktvWkEusxCiOk"),
-                                       HTTPHeader(name: "Notion-Version", value: "2022-06-28")]
+                                       HTTPHeader(name: "Notion-Version", value: "2022-06-28"),
+                                       HTTPHeader(name: "Content-Type", value: "application/jso" )]
     
     func notionRead() {
         
 //    https:www.notion.so/5b4f15d72e7243f38a8ab92d430ff54b?v=1c1af0d8a3d34ea5a214703edb000946&pvs=4
-        AF.request("https://api.notion.com/v1/databases/5b4f15d72e7243f38a8ab92d430ff54b/query",
-                   method: .post,
+//    https://www.notion.so/2250222c51e24d9d82a948c9a6715a4d?pvs=4
+//    https:www.notion.so/a41328cac58f48468a4471c33e0f53b4?v=bc98748f9bee4c0bbd66b5060bd80df0&pvs=4
+//    https://www.notion.so/2024-1-4-7edae5330cff4ba0bfc3012ffc139764?pvs=4
+        AF.request("https://api.notion.com/v1/blocks/2250222c51e24d9d82a948c9a6715a4d/children",
+                   method: .get,
                    parameters: nil,
                    encoding: JSONEncoding.default,
                    headers: notionHeaders,

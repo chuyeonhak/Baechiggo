@@ -11,7 +11,7 @@ import SwiftUI
 struct BaechiggoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }

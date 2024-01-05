@@ -14,6 +14,7 @@
 		EFFD943A2B47C1EE00E12BBA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EFFD94392B47C1EE00E12BBA /* ComposableArchitecture */; };
 		EFFD943C2B47C33100E12BBA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFD943B2B47C33100E12BBA /* Launch Screen.storyboard */; };
 		EFFD943F2B47C4A600E12BBA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EFFD943E2B47C4A600E12BBA /* Alamofire */; };
+		EFFD94412B47DD5A00E12BBA /* RootView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFD94402B47DD5A00E12BBA /* RootView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		EFFD942E2B4694B300E12BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFFD94312B4694B300E12BBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EFFD943B2B47C33100E12BBA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		EFFD94402B47DD5A00E12BBA /* RootView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +43,6 @@
 		EFFD941E2B4694B200E12BBA = {
 			isa = PBXGroup;
 			children = (
-				EFFD943B2B47C33100E12BBA /* Launch Screen.storyboard */,
 				EFFD94292B4694B200E12BBA /* Baechiggo */,
 				EFFD94282B4694B200E12BBA /* Products */,
 			);
@@ -58,8 +59,10 @@
 		EFFD94292B4694B200E12BBA /* Baechiggo */ = {
 			isa = PBXGroup;
 			children = (
+				EFFD943B2B47C33100E12BBA /* Launch Screen.storyboard */,
 				EFFD942A2B4694B200E12BBA /* BaechiggoApp.swift */,
 				EFFD942C2B4694B200E12BBA /* ContentView.swift */,
+				EFFD94402B47DD5A00E12BBA /* RootView.storyboard */,
 				EFFD942E2B4694B300E12BBA /* Assets.xcassets */,
 				EFFD94302B4694B300E12BBA /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFFD943C2B47C33100E12BBA /* Launch Screen.storyboard in Resources */,
+				EFFD94412B47DD5A00E12BBA /* RootView.storyboard in Resources */,
 				EFFD94322B4694B300E12BBA /* Preview Assets.xcassets in Resources */,
 				EFFD942F2B4694B300E12BBA /* Assets.xcassets in Resources */,
 			);
