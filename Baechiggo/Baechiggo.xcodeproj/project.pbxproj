@@ -8,23 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		EFFD942B2B4694B200E12BBA /* BaechiggoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD942A2B4694B200E12BBA /* BaechiggoApp.swift */; };
-		EFFD942D2B4694B200E12BBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD942C2B4694B200E12BBA /* ContentView.swift */; };
+		EFFD942D2B4694B200E12BBA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD942C2B4694B200E12BBA /* RootView.swift */; };
 		EFFD942F2B4694B300E12BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFD942E2B4694B300E12BBA /* Assets.xcassets */; };
 		EFFD94322B4694B300E12BBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFD94312B4694B300E12BBA /* Preview Assets.xcassets */; };
 		EFFD943A2B47C1EE00E12BBA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EFFD94392B47C1EE00E12BBA /* ComposableArchitecture */; };
 		EFFD943C2B47C33100E12BBA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFD943B2B47C33100E12BBA /* Launch Screen.storyboard */; };
 		EFFD943F2B47C4A600E12BBA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EFFD943E2B47C4A600E12BBA /* Alamofire */; };
-		EFFD94412B47DD5A00E12BBA /* RootView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFD94402B47DD5A00E12BBA /* RootView.storyboard */; };
+		EFFD94432B47DFBE00E12BBA /* KeyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFFD94422B47DFBE00E12BBA /* KeyList.plist */; };
+		EFFD94462B47E07D00E12BBA /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD94452B47E07D00E12BBA /* KeyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EFFD94272B4694B200E12BBA /* Baechiggo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baechiggo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFD942A2B4694B200E12BBA /* BaechiggoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaechiggoApp.swift; sourceTree = "<group>"; };
-		EFFD942C2B4694B200E12BBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EFFD942C2B4694B200E12BBA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EFFD942E2B4694B300E12BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFFD94312B4694B300E12BBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EFFD943B2B47C33100E12BBA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		EFFD94402B47DD5A00E12BBA /* RootView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootView.storyboard; sourceTree = "<group>"; };
+		EFFD94422B47DFBE00E12BBA /* KeyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KeyList.plist; sourceTree = "<group>"; };
+		EFFD94452B47E07D00E12BBA /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +63,9 @@
 			children = (
 				EFFD943B2B47C33100E12BBA /* Launch Screen.storyboard */,
 				EFFD942A2B4694B200E12BBA /* BaechiggoApp.swift */,
-				EFFD942C2B4694B200E12BBA /* ContentView.swift */,
-				EFFD94402B47DD5A00E12BBA /* RootView.storyboard */,
+				EFFD942C2B4694B200E12BBA /* RootView.swift */,
+				EFFD94452B47E07D00E12BBA /* KeyManager.swift */,
+				EFFD94422B47DFBE00E12BBA /* KeyList.plist */,
 				EFFD942E2B4694B300E12BBA /* Assets.xcassets */,
 				EFFD94302B4694B300E12BBA /* Preview Content */,
 			);
@@ -144,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFFD943C2B47C33100E12BBA /* Launch Screen.storyboard in Resources */,
-				EFFD94412B47DD5A00E12BBA /* RootView.storyboard in Resources */,
+				EFFD94432B47DFBE00E12BBA /* KeyList.plist in Resources */,
 				EFFD94322B4694B300E12BBA /* Preview Assets.xcassets in Resources */,
 				EFFD942F2B4694B300E12BBA /* Assets.xcassets in Resources */,
 			);
@@ -157,8 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFFD942D2B4694B200E12BBA /* ContentView.swift in Sources */,
+				EFFD942D2B4694B200E12BBA /* RootView.swift in Sources */,
 				EFFD942B2B4694B200E12BBA /* BaechiggoApp.swift in Sources */,
+				EFFD94462B47E07D00E12BBA /* KeyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RootView.swift
 //  Baechiggo
 //
 //  Created by chuchu on 1/4/24.
@@ -33,9 +33,8 @@ struct RootView: View {
 }
 
 struct TestAPI {
-    let notionHeaders : HTTPHeaders = [HTTPHeader(name: "Authorization", value: "secret_JoL2mbdes95THHhuUXUeaE29VeRr6wktvWkEusxCiOk"),
-                                       HTTPHeader(name: "Notion-Version", value: "2022-06-28"),
-                                       HTTPHeader(name: "Content-Type", value: "application/jso" )]
+    let notionHeaders : HTTPHeaders = [HTTPHeader(name: "Authorization", value: KeyManager.shared.getKey(.notionSecretKey)),
+                                       HTTPHeader(name: "Notion-Version", value: "2022-06-28")]
     
     func notionRead() {
         
@@ -43,7 +42,7 @@ struct TestAPI {
 //    https://www.notion.so/2250222c51e24d9d82a948c9a6715a4d?pvs=4
 //    https:www.notion.so/a41328cac58f48468a4471c33e0f53b4?v=bc98748f9bee4c0bbd66b5060bd80df0&pvs=4
 //    https://www.notion.so/2024-1-4-7edae5330cff4ba0bfc3012ffc139764?pvs=4
-        AF.request("https://api.notion.com/v1/blocks/978fe6f3-4ca4-441b-832f-d0a7228bd643/children",
+        AF.request("https://api.notion.com/v1/blocks/\(KeyManager.shared.getKey(.matchListBlockID))/children",
                    method: .get,
                    parameters: nil,
                    encoding: JSONEncoding.default,
