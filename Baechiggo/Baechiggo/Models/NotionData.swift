@@ -8,24 +8,16 @@
 import Foundation
 
 struct MatchDateModel: Codable {
-    let matchDateList: [MatchDate]
+    let results: [NotionInfo]
     let hasMore: Bool?
 
     enum CodingKeys: String, CodingKey {
-        case matchDateList = "results"
+        case results
         case hasMore = "has_more"
     }
 }
 
-struct MatchDate: Codable, Hashable {
-    static func == (lhs: MatchDate, rhs: MatchDate) -> Bool {
-        return lhs.id == rhs.id
-    }
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-    
+struct NotionInfo: Codable, Hashable {
     let id: String?
     let createdTime, lastEditedTime: String?
     let hasChildren, archived: Bool?
@@ -39,9 +31,22 @@ struct MatchDate: Codable, Hashable {
         case archived
         case childPage = "child_page"
     }
+    
+    static func == (lhs: NotionInfo, rhs: NotionInfo) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
 
-// MARK: - ChildPage
 struct ChildPage: Codable {
     let title: String?
+}
+
+extension NotionInfo {
+    var idString: String { id ?? "" }
+    
+    var titleString: String { childPage?.title ?? "" }
 }
