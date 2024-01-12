@@ -11,7 +11,10 @@ import Alamofire
 extension NetworkManager {
     enum NetworkType {
         case matchDataList
+        case matchData(String)
         case getAllUser
+        case queryDataBase(String)
+        case getUserDatabase
         
         var header: HTTPHeaders {
             return [
@@ -25,25 +28,25 @@ extension NetworkManager {
             switch self {
             case .matchDataList:
                 return domain + "blocks/\(KeyManager.shared.getKey(.matchListBlockID))/children"
+            case .matchData(let id):
+                return domain + "blocks/\(id)/children"
             case .getAllUser:
                 return domain + "users"
+            case .queryDataBase(let id):
+                return domain + "databases/\(id)/query"
+            case .getUserDatabase:
+                return domain + "databases/\(KeyManager.shared.getKey(.userDatabaseID))/query"
             }
         }
         
         var method: HTTPMethod {
             switch self {
-            case .matchDataList:
-                return .get
-            case .getAllUser:
-                return .get
+            case .matchDataList, .matchData(_), .getAllUser: return .get
+            case .queryDataBase(_), .getUserDatabase: return .post
             }
         }
         
-        var parameters: Parameters? {
-            switch self {
-            case .matchDataList, .getAllUser: nil
-            }
-        }
+        var parameters: Parameters? { nil }
         
         var parameterEncoding: ParameterEncoding {
             return JSONEncoding.default
