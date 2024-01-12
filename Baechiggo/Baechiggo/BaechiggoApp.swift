@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct BaechiggoApp: App {
     var body: some Scene {
+        let _ = DataManager.shared
         WindowGroup {
             RootView()
         }
