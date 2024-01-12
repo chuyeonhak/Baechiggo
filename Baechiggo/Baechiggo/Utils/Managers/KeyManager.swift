@@ -8,22 +8,9 @@
 import Foundation
 
 struct KeyManager {
-    
-    enum KeyType {
-        case notionSecretKey
-        case matchListBlockID
-        
-        var key: String {
-            switch self {
-            case .notionSecretKey:
-                "NotionSecretKey"
-            case .matchListBlockID:
-                "MatchListBlockID"
-            }
-        }
-    }
-    
     static let shared = KeyManager()
+    
+    private init() { }
     
     func getKey(_ type: KeyType) -> String {
         guard let keyListPath = Bundle.main.path(forResource: "KeyList", ofType: "plist"),
@@ -36,5 +23,24 @@ struct KeyManager {
         else { return "" }
         
         return value
+    }
+}
+
+extension KeyManager {
+    enum KeyType {
+        case notionSecretKey
+        case matchListBlockID
+        case userDatabaseID
+        
+        var key: String {
+            switch self {
+            case .notionSecretKey:
+                "NotionSecretKey"
+            case .matchListBlockID:
+                "MatchListBlockID"
+            case .userDatabaseID:
+                "UserDatabaseID"
+            }
+        }
     }
 }
