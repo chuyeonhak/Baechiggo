@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF1799A62B4B7D430054A540 /* MatchDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1799A52B4B7D430054A540 /* MatchDateModel.swift */; };
+		EF1799A62B4B7D430054A540 /* NotionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1799A52B4B7D430054A540 /* NotionData.swift */; };
 		EF1799A82B4B84AC0054A540 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1799A72B4B84AC0054A540 /* NetworkManager.swift */; };
 		EF1799AA2B4B85B30054A540 /* NetworkManager +.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1799A92B4B85B30054A540 /* NetworkManager +.swift */; };
+		EF1799AC2B4BBD320054A540 /* MatchTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1799AB2B4BBD320054A540 /* MatchTableView.swift */; };
+		EF1799AE2B4BF3BB0054A540 /* Sequence +.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1799AD2B4BF3BB0054A540 /* Sequence +.swift */; };
+		EFEAB9F52B4D26A0002875DC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAB9F42B4D26A0002875DC /* DataManager.swift */; };
 		EFFD942B2B4694B200E12BBA /* BaechiggoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD942A2B4694B200E12BBA /* BaechiggoApp.swift */; };
 		EFFD942D2B4694B200E12BBA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD942C2B4694B200E12BBA /* RootView.swift */; };
 		EFFD942F2B4694B300E12BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFD942E2B4694B300E12BBA /* Assets.xcassets */; };
@@ -24,9 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EF1799A52B4B7D430054A540 /* MatchDateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDateModel.swift; sourceTree = "<group>"; };
+		EF1799A52B4B7D430054A540 /* NotionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionData.swift; sourceTree = "<group>"; };
 		EF1799A72B4B84AC0054A540 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EF1799A92B4B85B30054A540 /* NetworkManager +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager +.swift"; sourceTree = "<group>"; };
+		EF1799AB2B4BBD320054A540 /* MatchTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableView.swift; sourceTree = "<group>"; };
+		EF1799AD2B4BF3BB0054A540 /* Sequence +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence +.swift"; sourceTree = "<group>"; };
+		EFEAB9F42B4D26A0002875DC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		EFFD94272B4694B200E12BBA /* Baechiggo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baechiggo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFD942A2B4694B200E12BBA /* BaechiggoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaechiggoApp.swift; sourceTree = "<group>"; };
 		EFFD942C2B4694B200E12BBA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -55,7 +61,7 @@
 		EF1799A42B4B75380054A540 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EF1799A52B4B7D430054A540 /* MatchDateModel.swift */,
+				EF1799A52B4B7D430054A540 /* NotionData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -86,6 +92,7 @@
 				EFFD942A2B4694B200E12BBA /* BaechiggoApp.swift */,
 				EFFD942C2B4694B200E12BBA /* RootView.swift */,
 				EFFD944A2B47F08C00E12BBA /* MatchView.swift */,
+				EF1799AB2B4BBD320054A540 /* MatchTableView.swift */,
 				EFFD94422B47DFBE00E12BBA /* KeyList.plist */,
 				EFFD942E2B4694B300E12BBA /* Assets.xcassets */,
 				EFFD94302B4694B300E12BBA /* Preview Content */,
@@ -113,6 +120,7 @@
 		EFFD94482B47E8A800E12BBA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EF1799AD2B4BF3BB0054A540 /* Sequence +.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				EFFD94452B47E07D00E12BBA /* KeyManager.swift */,
+				EFEAB9F42B4D26A0002875DC /* DataManager.swift */,
 				EF1799A72B4B84AC0054A540 /* NetworkManager.swift */,
 				EF1799A92B4B85B30054A540 /* NetworkManager +.swift */,
 			);
@@ -218,11 +227,14 @@
 				EFFD942D2B4694B200E12BBA /* RootView.swift in Sources */,
 				EF1799AA2B4B85B30054A540 /* NetworkManager +.swift in Sources */,
 				EFFD944E2B47F19800E12BBA /* SpinnerView.swift in Sources */,
+				EF1799AE2B4BF3BB0054A540 /* Sequence +.swift in Sources */,
 				EFFD942B2B4694B200E12BBA /* BaechiggoApp.swift in Sources */,
 				EF1799A82B4B84AC0054A540 /* NetworkManager.swift in Sources */,
 				EFFD944B2B47F08C00E12BBA /* MatchView.swift in Sources */,
 				EFFD94462B47E07D00E12BBA /* KeyManager.swift in Sources */,
-				EF1799A62B4B7D430054A540 /* MatchDateModel.swift in Sources */,
+				EFEAB9F52B4D26A0002875DC /* DataManager.swift in Sources */,
+				EF1799A62B4B7D430054A540 /* NotionData.swift in Sources */,
+				EF1799AC2B4BBD320054A540 /* MatchTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
